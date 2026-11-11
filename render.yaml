@@ -5,6 +5,28 @@ services:
     buildCommand: ""
     staticPublishPath: .
     autoDeployTrigger: commit
+    routes:
+      - type: redirect
+        source: /programas.html
+        destination: /projetos-culturais.html
+      - type: redirect
+        source: /curso-de-fandango.html
+        destination: /projetos-culturais.html
+      - type: redirect
+        source: /invernadas-artisticas.html
+        destination: /projetos-culturais.html
+      - type: redirect
+        source: /galeto-solidario.html
+        destination: /projetos-sociais.html
+      - type: redirect
+        source: /tropilanche.html
+        destination: /projetos-sociais.html
+      - type: redirect
+        source: /natal-solidario.html
+        destination: /projetos-sociais.html
+      - type: redirect
+        source: /eventos.html
+        destination: /eventos-e-competicoes.html
     headers:
       - path: /*
         name: X-Content-Type-Options
