@@ -6,7 +6,9 @@ Site institucional do GTF Tropilha Crioula.
 
 - `index.html`: apresentação, atividades, agenda e contato.
 - `styles.css`: identidade visual e layout responsivo.
-- `render.yaml`: configuração de publicação como Render Static Site.
+- `404.html`, `robots.txt`, `sitemap.xml`: página de erro e indexação.
+- `logo-tropilha-crioula-*.webp`, `favicon.png`, `apple-touch-icon.png`, `og-image.png`: imagens otimizadas (logo, ícones e prévia de compartilhamento).
+- `render.yaml`: configuração de publicação e cabeçalhos HTTP no Render Static Site.
 
 Site estático sem dependências e sem etapa de compilação. Abra `index.html` para visualizar localmente.
 
@@ -14,9 +16,9 @@ Site estático sem dependências e sem etapa de compilação. Abra `index.html` 
 
 Conectar este repositório ao Render, selecionar **Static Site**, usar a branch `main`, deixar o comando de build vazio e definir **Publish Directory** como `.`. Ativar publicação automática após alterações na branch `main`.
 
-## Atualizações por instruções no ChatGPT
+## Atualizações
 
-Informe o endereço deste repositório e descreva a alteração desejada. Com acesso autorizado ao GitHub, o assistente poderá editar os arquivos e registrar as mudanças. A publicação automática no Render atualizará o site depois do commit.
+Edite os arquivos e faça commit na branch `main`; a publicação no Render é automática. Se o domínio mudar, atualize as URLs em `index.html` (canonical e Open Graph), `robots.txt` e `sitemap.xml`.
 
 ## Conteúdo pendente
 
