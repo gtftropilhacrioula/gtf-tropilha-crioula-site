@@ -4,7 +4,7 @@ Site institucional do GTF Tropilha Crioula.
 
 ## Estrutura
 
-- `index.html`: apresentação, atividades, agenda e contato.
+- `index.html`, `sobre.html`, `iniciativas.html`, `fomento.html`: páginas do portal (geradas de dados do Relatório e Portfólio 2024–2026).
 - `styles.css`: identidade visual e layout responsivo.
 - `404.html`, `robots.txt`, `sitemap.xml`: página de erro e indexação.
 - `logo-tropilha-crioula-*.webp`, `favicon.png`, `apple-touch-icon.png`, `og-image.png`: imagens otimizadas (logo, ícones e prévia de compartilhamento).
