@@ -3,7 +3,7 @@
   var chipsAno = document.getElementById("f-ano");
   var chipsDep = document.getElementById("f-dep");
   var fim = document.getElementById("tl-fim");
-  var ordem = anos.map(function (a) { return a.getAttribute("data-ano"); }).reverse(); // mais novo -> mais antigo, "0" por último
+  var ordem = anos.map(function (a) { return a.getAttribute("data-ano"); }); // DOM já está do mais novo ao mais antigo, "0" por último
   ordem = ordem.filter(function (x) { return x !== "0"; }).concat(ordem.indexOf("0") >= 0 ? ["0"] : []);
   var ano = "todos", dep = "todos", mostrar = {};
 
