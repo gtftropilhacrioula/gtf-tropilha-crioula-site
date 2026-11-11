@@ -4,11 +4,12 @@ Site institucional do GTF Tropilha Crioula.
 
 ## Estrutura
 
-- `index.html`, `sobre.html`, `iniciativas.html`, `fomento.html`: páginas do portal (geradas de dados do Relatório e Portfólio 2024–2026).
+Páginas: `index.html`, `o-tropilha.html`, `programas.html`, `curso-de-fandango.html`, `invernadas-artisticas.html`, `galeto-solidario.html`, `tropilanche.html`, `natal-solidario.html`, `eventos.html`, `transparencia.html`, `apoie.html`, `contato.html` e `404.html`.
+
 - `styles.css`: identidade visual e layout responsivo.
-- `404.html`, `robots.txt`, `sitemap.xml`: página de erro e indexação.
-- `logo-tropilha-crioula-*.webp`, `favicon.png`, `apple-touch-icon.png`, `og-image.png`: imagens otimizadas (logo, ícones e prévia de compartilhamento).
-- `render.yaml`: configuração de publicação e cabeçalhos HTTP no Render Static Site.
+- `img/`: fotos otimizadas (WebP). Logo, favicon e `og-image.png` na raiz.
+- `robots.txt`, `sitemap.xml`: indexação.
+- `render.yaml`: publicação e cabeçalhos HTTP no Render Static Site.
 
 Site estático sem dependências e sem etapa de compilação. Abra `index.html` para visualizar localmente.
 

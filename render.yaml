@@ -30,3 +30,6 @@ services:
       - path: /*.png
         name: Cache-Control
         value: public, max-age=604800
+      - path: /img/*
+        name: Cache-Control
+        value: public, max-age=604800
