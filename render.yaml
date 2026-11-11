@@ -2,9 +2,11 @@ services:
   - type: web
     runtime: static
     name: gtf-tropilha-crioula-site
-    buildCommand: ""
+    buildCommand: "pip install -q pillow; python3 tools/fotos_para_monday.py || true"
     staticPublishPath: .
     autoDeployTrigger: commit
+    envVars:
+      - fromGroup: gtf-monday
     routes:
       - type: redirect
         source: /programas.html
