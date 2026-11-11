@@ -1,7 +1,29 @@
 (function () {
-  var ano = "todos", dep = "todos";
-  var anos = document.querySelectorAll(".tl-ano");
-  var itens = document.querySelectorAll(".tl-item");
+  var anos = Array.prototype.slice.call(document.querySelectorAll(".tl-ano"));
+  var chipsAno = document.getElementById("f-ano");
+  var chipsDep = document.getElementById("f-dep");
+  var fim = document.getElementById("tl-fim");
+  var ordem = anos.map(function (a) { return a.getAttribute("data-ano"); }).reverse(); // mais novo -> mais antigo, "0" por último
+  ordem = ordem.filter(function (x) { return x !== "0"; }).concat(ordem.indexOf("0") >= 0 ? ["0"] : []);
+  var ano = "todos", dep = "todos", mostrar = {};
+
+  function secao(a) { return document.querySelector('.tl-ano[data-ano="' + a + '"]'); }
+  function temItem(a) {
+    var s = secao(a);
+    return !!s && (dep === "todos" ? s.querySelector(".tl-item") : s.querySelector('.tl-item[data-dep="' + dep + '"]'));
+  }
+  function maisAntigo() {
+    var idx = -1;
+    ordem.forEach(function (a, i) { if (mostrar[a]) idx = Math.max(idx, i); });
+    return idx;
+  }
+  function carregaProximo() {
+    for (var i = maisAntigo() + 1; i < ordem.length; i++) {
+      if (temItem(ordem[i])) { mostrar[ordem[i]] = true; return true; }
+      mostrar[ordem[i]] = true; // ano sem itens neste filtro: conta como visto
+    }
+    return false;
+  }
   function marca(grupo, valor, attr) {
     grupo.querySelectorAll(".chip").forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute(attr) === valor ? "true" : "false");
@@ -10,7 +32,7 @@
   function aplica() {
     var visiveis = 0;
     anos.forEach(function (a) {
-      var okAno = ano === "todos" || a.getAttribute("data-ano") === ano;
+      var okAno = ano === "todos" || mostrar[a.getAttribute("data-ano")];
       var algum = false;
       a.querySelectorAll(".tl-mes").forEach(function (m) {
         var mAlgum = false;
@@ -24,19 +46,39 @@
       });
       a.hidden = !algum;
     });
+    if (visiveis === 0 && ano !== "todos" && carregaProximo()) { aplica(); return; }
+    var acabou = ano === "todos" || maisAntigo() >= ordem.length - 1;
     document.getElementById("tl-vazio").hidden = visiveis > 0;
-    marca(document.getElementById("f-ano"), ano, "data-ano");
-    marca(document.getElementById("f-dep"), dep, "data-dep");
+    document.getElementById("tl-acabou").hidden = !(acabou && visiveis > 0 && ano !== "todos");
+    marca(chipsAno, ano, "data-ano");
+    marca(chipsDep, dep, "data-dep");
   }
-  document.getElementById("f-ano").addEventListener("click", function (e) {
-    var b = e.target.closest(".chip"); if (!b) return;
-    ano = b.getAttribute("data-ano"); aplica();
+  function escolheAno(v) {
+    ano = v; mostrar = {};
+    if (v !== "todos") mostrar[v] = true;
+    aplica();
+    verificaFim();
+  }
+  function noFim() {
+    var r = fim.getBoundingClientRect();
+    return r.top < (window.innerHeight || document.documentElement.clientHeight) + 200;
+  }
+  function verificaFim() {
+    var guarda = 0;
+    while (ano !== "todos" && noFim() && guarda++ < 30) {
+      if (!carregaProximo()) break;
+      aplica();
+    }
+  }
+
+  chipsAno.addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (b) escolheAno(b.getAttribute("data-ano"));
   });
-  document.getElementById("f-dep").addEventListener("click", function (e) {
+  chipsDep.addEventListener("click", function (e) {
     var b = e.target.closest(".chip"); if (!b) return;
-    dep = b.getAttribute("data-dep"); aplica();
+    dep = b.getAttribute("data-dep"); aplica(); verificaFim();
   });
-  var primeiro = document.querySelector("#f-ano .chip:nth-child(2)");
-  ano = primeiro ? primeiro.getAttribute("data-ano") : "todos";
-  aplica();
+  window.addEventListener("scroll", verificaFim, { passive: true });
+  window.addEventListener("resize", verificaFim);
+  escolheAno(ordem[0] || "todos");
 })();
