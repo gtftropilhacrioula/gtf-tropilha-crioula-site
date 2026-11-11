@@ -46,7 +46,7 @@ nav a.nav-cta{background:var(--gold);color:var(--blue);padding:6px 16px;font-wei
 
 /* ---- Menu e layout para celular ---- */
 .menu-toggle,.menu-btn{display:none}
-@media(max-width:1200px){
+@media(max-width:1240px){
 header{position:relative;flex-direction:row;flex-wrap:wrap;align-items:center;padding:14px 20px;gap:0}
 .brand-logo{width:56px}.brand{font-size:12px}.brand strong{font-size:17px}
 .menu-btn{display:flex;flex-direction:column;justify-content:center;gap:5px;width:48px;height:48px;padding:12px;margin-left:auto;cursor:pointer;border:2px solid var(--blue);border-radius:4px}
@@ -77,8 +77,14 @@ h1{font-size:clamp(34px,10vw,44px)}h2{font-size:clamp(28px,8vw,34px)}.hero{min-h
 :root{--display:"Lobster",Georgia,serif;--nome:"Woodcut",Georgia,serif}
 h1,h2,h3,.stat strong,.publicos strong,.pix strong,.page-hero h1{font-family:var(--display);font-weight:400;letter-spacing:0}
 h1{letter-spacing:0}.hero h1,.page-hero h1{line-height:1.12}
-.brand span,.brand strong,.site-footer .foot-grid>div:first-child>strong,.hero-content>.eyebrow{font-family:var(--nome);font-weight:400}
-.brand span{font-size:15px;letter-spacing:.02em}.brand strong{font-size:22px;font-weight:400;letter-spacing:.03em}
-.hero-content>.eyebrow{font-size:15px;letter-spacing:.14em}.site-footer .foot-grid>div:first-child>strong{font-size:24px;letter-spacing:.03em}
-@media(max-width:1200px){.brand span{font-size:13px}.brand strong{font-size:20px}}
-@media(max-width:760px){.brand{gap:10px;min-width:0}.brand span{font-size:11px}.brand strong{font-size:15px;letter-spacing:.01em;white-space:nowrap}.hero-content>.eyebrow{font-size:12px;letter-spacing:.06em}.site-footer .foot-grid>div:first-child>strong{font-size:19px}}
+.hero-content>.eyebrow{font-family:var(--nome);font-weight:400}
+.hero-content>.eyebrow{font-size:15px;letter-spacing:.14em}
+@media(max-width:760px){.brand{gap:10px;min-width:0}.hero-content>.eyebrow{font-size:12px;letter-spacing:.06em}}
+
+/* ---- Nome da entidade em duas linhas: Arial negrito (topo) e Woodcut (base), mesma largura ---- */
+.nome{display:inline-flex;flex-direction:column;align-items:stretch;font-size:20px;line-height:1.2;min-width:0}
+.nome .n2{font-family:var(--nome);font-weight:400;text-transform:uppercase;letter-spacing:0;white-space:nowrap}
+.nome .n1{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;font-weight:700;text-transform:uppercase;font-size:.98em;letter-spacing:0;white-space:nowrap;text-align:justify;text-align-last:justify;color:var(--blue)}
+.nome-rodape{font-size:24px;margin-bottom:6px}.site-footer .nome .n1{color:var(--white)}
+@media(max-width:760px){.nome{font-size:12.5px}.nome-rodape{font-size:18px}}
+@media(max-width:360px){.nome{font-size:11px}.nome-rodape{font-size:16px}}
