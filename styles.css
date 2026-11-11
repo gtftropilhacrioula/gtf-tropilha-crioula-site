@@ -84,7 +84,7 @@ h1{letter-spacing:0}.hero h1,.page-hero h1{line-height:1.12}
 /* ---- Nome da entidade em duas linhas: Arial negrito (topo) e Woodcut (base), mesma largura ---- */
 .nome{display:inline-flex;flex-direction:column;align-items:stretch;font-size:20px;line-height:1.2;min-width:0}
 .nome .n2{font-family:var(--nome);font-weight:400;text-transform:uppercase;letter-spacing:0;white-space:nowrap}
-.nome .n1{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;font-weight:700;text-transform:uppercase;font-size:.98em;letter-spacing:0;white-space:nowrap;text-align:justify;text-align-last:justify;color:var(--blue)}
+.nome .n1{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;font-weight:700;text-transform:uppercase;font-size:.78em;width:80%;align-self:center;letter-spacing:0;white-space:nowrap;text-align:justify;text-align-last:justify;color:var(--blue)}
 .nome-rodape{font-size:24px;margin-bottom:6px}.site-footer .nome .n1{color:var(--white)}
 @media(max-width:760px){.nome{font-size:12.5px}.nome-rodape{font-size:18px}}
 @media(max-width:360px){.nome{font-size:11px}.nome-rodape{font-size:16px}}
