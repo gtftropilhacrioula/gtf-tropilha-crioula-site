@@ -107,7 +107,7 @@ h1{letter-spacing:0}.hero h1,.page-hero h1{line-height:1.12}
 .chip:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .dot{width:10px;height:10px;border-radius:50%;display:inline-block;border:1px solid #ffffff99}
 .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.03em;padding:3px 10px;border-radius:999px;color:var(--white);margin-bottom:6px}
-.tag-pat{background:#003B7A}.tag-cul{background:#D4A017;color:#003B7A}.tag-art{background:#C62828}.tag-esp{background:#00763A}.tag-soc{background:#6B3FA0}.tag-cam{background:#8A5A2B}
+.tag-pat{background:#003B7A}.tag-prj{background:#D4A017;color:#00264F}.tag-cul{background:#5BC0EB;color:#00264F}.tag-art{background:#00AB4E;color:#00264F}.tag-esp{background:#8A5A2B}.tag-soc{background:#6B3FA0}.tag-cam{background:#0B4D2B}
 .tl-lista{padding-top:16px}
 .tl-ano{margin-bottom:40px}.tl-ano-h{font:clamp(34px,4vw,52px)/1.1 var(--display);margin:0 0 16px;color:var(--blue)}
 .tl-mes{display:grid;grid-template-columns:150px 1fr;gap:8px 28px;padding:18px 0;border-top:1px solid #d7e0eb}
