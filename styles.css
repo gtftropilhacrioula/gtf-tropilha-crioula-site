@@ -163,3 +163,6 @@ h1{letter-spacing:0}.hero h1,.page-hero h1{line-height:1.12}
 @media(max-width:760px){.foot-assoc{width:calc(100% - 32px);margin:8px auto 32px;padding:22px;flex-direction:column;align-items:flex-start}.foot-assoc .assoc-btn{width:100%;justify-content:center}}
 .ev-fotos.ev-um{display:block}.ev-fotos.ev-um img{width:min(100%,520px);height:auto;margin:0 auto}
 .ev-fotos.ev-4{grid-template-columns:repeat(2,minmax(0,1fr))}.ev-fotos.ev-4 img{height:auto;aspect-ratio:1/1}
+/* ---- Alinhamento: texto justificado (ou centralizado), nunca so a esquerda ---- */
+p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.contact p,#erro p,#erro{text-align:center}
