@@ -161,3 +161,4 @@ h1{letter-spacing:0}.hero h1,.page-hero h1{line-height:1.12}
 .foot-assoc .assoc-btn{margin:0;background:var(--gold);color:var(--blue);border-radius:999px;padding:15px 30px;font-size:16px;gap:14px;transition:background .2s,transform .2s}
 .foot-assoc .assoc-btn:hover{background:var(--rs-yellow);transform:translateY(-2px)}
 @media(max-width:760px){.foot-assoc{width:calc(100% - 32px);margin:8px auto 32px;padding:22px;flex-direction:column;align-items:flex-start}.foot-assoc .assoc-btn{width:100%;justify-content:center}}
+.ev-fotos.ev-um{display:block}.ev-fotos.ev-um img{width:min(100%,520px);height:auto;margin:0 auto}
