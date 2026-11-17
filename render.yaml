@@ -7,6 +7,9 @@ services:
     autoDeployTrigger: commit
     routes:
       - type: redirect
+        source: /apoie.html
+        destination: /
+      - type: redirect
         source: /programas.html
         destination: /projetos-culturais.html
       - type: redirect

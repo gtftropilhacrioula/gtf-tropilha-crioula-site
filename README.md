@@ -4,7 +4,7 @@ Site institucional do GTF Tropilha Crioula.
 
 ## Estrutura
 
-Páginas: `index.html`, `o-tropilha.html`, `programas.html`, `curso-de-fandango.html`, `invernadas-artisticas.html`, `galeto-solidario.html`, `tropilanche.html`, `natal-solidario.html`, `eventos.html`, `transparencia.html`, `apoie.html`, `contato.html` e `404.html`.
+Páginas: `index.html`, `o-tropilha.html`, `programas.html`, `curso-de-fandango.html`, `invernadas-artisticas.html`, `galeto-solidario.html`, `tropilanche.html`, `natal-solidario.html`, `eventos.html`, `transparencia.html`, `contato.html` e `404.html`.
 
 - `styles.css`: identidade visual e layout responsivo.
 - `img/`: fotos otimizadas (WebP). Logo, favicon e `og-image.png` na raiz.
