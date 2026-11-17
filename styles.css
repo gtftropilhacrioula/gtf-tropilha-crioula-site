@@ -56,8 +56,9 @@ header{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-
 .menu-btn:hover .menu-ico span:nth-child(2){width:100%}
 .menu-toggle:focus-visible+.menu-btn{outline:3px solid var(--gold);outline-offset:3px}
 .brand{order:1}
-.header-cta{order:2;margin-left:auto;padding:12px 26px;background:var(--gold);color:var(--blue);font-weight:700;font-size:14px;text-decoration:none;border-radius:999px;transition:background .2s,transform .2s}
-.header-cta:hover{background:var(--rs-yellow);transform:translateY(-1px);text-decoration:none}
+.header-cta{order:2;margin-left:auto;padding:11px 26px;background:var(--white);color:var(--blue);border:2px solid var(--gold);font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;border-radius:999px;transition:background .2s,transform .2s,box-shadow .2s}
+.header-cta:hover{background:#fff8e1;transform:translateY(-1px);box-shadow:0 4px 14px rgba(212,160,23,.3);text-decoration:none}
+.header-cta:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .menu-overlay{position:fixed;inset:0;background:rgba(0,20,48,.58);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s .35s;z-index:90;cursor:pointer}
 header nav{position:fixed;top:0;bottom:0;left:0;width:min(400px,88vw);z-index:100;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;flex-wrap:nowrap;gap:0;padding:0 0 28px;margin:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;font-size:17px;color:var(--white);background:linear-gradient(165deg,#00306a 0%,var(--blue) 55%,#002a5c 100%);box-shadow:12px 0 48px rgba(0,20,48,.35);border-top:6px solid var(--gold);transform:translateX(-102%);visibility:hidden;transition:transform .42s cubic-bezier(.22,.8,.2,1),visibility 0s .42s;counter-reset:n}
 .menu-toggle:checked~nav{transform:none;visibility:visible;transition:transform .42s cubic-bezier(.22,.8,.2,1),visibility 0s}
