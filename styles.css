@@ -215,3 +215,8 @@ p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-
 .integ img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;display:block}
 .integ-n{padding:12px 10px;font-size:15px;line-height:1.3}
 @media(max-width:760px){.integs{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+
+/* Cartões de integrantes centralizados (nome da categoria segue à esquerda) */
+.integs{display:flex!important;flex-wrap:wrap;justify-content:center;gap:18px!important}
+.integ{flex:0 0 200px;width:200px}
+@media(max-width:760px){.integs{display:flex!important}.integ{flex:0 0 calc(50% - 9px);width:calc(50% - 9px)}}
