@@ -185,3 +185,6 @@ p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-
 .sec-fotos80{padding-top:20px}
 .sec-fotos80 .ev-fotos{width:80%;margin-left:auto;margin-right:auto}
 @media(max-width:760px){.sec-pre-fotos{padding-bottom:10px}.sec-fotos80{padding-top:10px}.sec-fotos80 .ev-fotos{width:100%}}
+
+/* Galerias 2x2: nunca cortar as fotos; barras laterais/superiores quando preciso */
+.ev-fotos.ev-4 img,.ev-fotos.sedefotos img{aspect-ratio:3/2;height:auto;object-fit:contain;background:var(--blue)}
