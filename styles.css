@@ -167,3 +167,8 @@ h1{letter-spacing:0}.hero h1,.page-hero h1{line-height:1.12}
 p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 .contact p,#erro p,#erro{text-align:center}
 .ev-fotos.sedefotos img{aspect-ratio:4/3}.fl{font-weight:700}
+
+/* Botões: brancos, texto dourado, cantos arredondados */
+.button{background:var(--white);color:var(--gold);border:2px solid var(--gold);border-radius:12px;padding:11px 22px}
+.button:hover{background:var(--gold);color:var(--white)}
+.button.ghost,.button.ghost-light{border-radius:12px}
