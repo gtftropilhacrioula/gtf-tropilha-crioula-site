@@ -7,26 +7,32 @@ services:
     autoDeployTrigger: commit
     routes:
       - type: redirect
+        source: /projetos-culturais.html
+        destination: /projetos-da-entidade.html
+      - type: redirect
+        source: /projetos-sociais.html
+        destination: /projetos-da-entidade.html#galeto
+      - type: redirect
         source: /apoie.html
         destination: /
       - type: redirect
         source: /programas.html
-        destination: /projetos-culturais.html
+        destination: /projetos-da-entidade.html
       - type: redirect
         source: /curso-de-fandango.html
-        destination: /projetos-culturais.html
+        destination: /projetos-da-entidade.html
       - type: redirect
         source: /invernadas-artisticas.html
-        destination: /projetos-culturais.html
+        destination: /projetos-da-entidade.html
       - type: redirect
         source: /galeto-solidario.html
-        destination: /projetos-sociais.html
+        destination: /projetos-da-entidade.html#galeto
       - type: redirect
         source: /tropilanche.html
-        destination: /projetos-sociais.html
+        destination: /projetos-da-entidade.html#galeto
       - type: redirect
         source: /natal-solidario.html
-        destination: /projetos-sociais.html
+        destination: /projetos-da-entidade.html#galeto
       - type: redirect
         source: /eventos.html
         destination: /eventos-e-competicoes.html
