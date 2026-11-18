@@ -171,7 +171,7 @@
   if (window.innerWidth < 900) modo(true);
 
   layout();
-  var dep = raiz.kids.filter(function (k) { return k.full === "Departamentos"; })[0];
+  var dep = raiz.kids.filter(function (k) { return k.label === "Departamentos"; })[0];
   if (dep && !reduz) setTimeout(function () { if (!dep.open) alternar(dep); }, 900);
   else if (dep) alternar(dep);
 })();
