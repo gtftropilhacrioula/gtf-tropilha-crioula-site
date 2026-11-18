@@ -220,3 +220,52 @@ p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-
 .integs{display:flex!important;flex-wrap:wrap;justify-content:center;gap:18px!important}
 .integ{flex:0 0 200px;width:200px}
 @media(max-width:760px){.integs{display:flex!important}.integ{flex:0 0 calc(50% - 9px);width:calc(50% - 9px)}}
+
+/* Globo do mapa do site (cabeçalho, só computador) */
+.header-globo{order:3;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:12px;border-radius:50%;color:var(--blue);border:2px solid var(--blue);transition:background .2s,color .2s,transform .5s}
+.header-globo:hover{background:var(--blue);color:var(--white);transform:rotate(25deg)}
+.header-globo:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:760px){.header-globo{display:none}}
+
+/* Mapa do site */
+.mapa-sec{max-width:1340px;padding-top:40px}
+.mapa-barra{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:16px}
+.mapa-barra button{font:600 14px/1 system-ui,sans-serif;padding:11px 20px;border-radius:999px;border:2px solid var(--blue);background:var(--white);color:var(--blue);cursor:pointer;transition:background .2s,color .2s}
+.mapa-barra button:hover,.mapa-barra button[aria-pressed=true]{background:var(--blue);color:var(--white)}
+.mapa-barra button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.mapa-palco{display:none;border-radius:20px;overflow:hidden;background:radial-gradient(ellipse at center,#0a4d9a 0%,#003B7A 45%,#001f44 100%);box-shadow:0 20px 60px rgba(0,30,70,.35);position:relative}
+.mapa-wrap.js .mapa-palco{display:block}
+.mapa-wrap.js.so-lista .mapa-palco,.mapa-wrap.js.so-lista .mapa-dica{display:none}
+.mapa-wrap.js:not(.so-lista) .mapa-lista{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.mapa-palco svg{display:block;width:100%;height:auto}
+.m-anel{fill:none;stroke:#ffffff22;stroke-dasharray:3 9}
+.m-linha{fill:none;stroke-linecap:round;stroke-dasharray:6 8;animation:m-fluxo 1.6s linear infinite;filter:drop-shadow(0 0 4px currentColor)}
+.m-linha.m-hl{stroke-dasharray:none;stroke-width:4;opacity:1!important}
+@keyframes m-fluxo{to{stroke-dashoffset:-28}}
+.m-no{cursor:pointer;outline:none}
+.m-no rect{fill:#012a57;stroke:var(--c);stroke-width:2;transition:fill .2s,stroke-width .2s}
+.m-no text{fill:#fff;font:600 15px system-ui,sans-serif;pointer-events:none}
+.m-p1 rect{fill:var(--c)}.m-p1 text{fill:#001f44;font-weight:700}
+.m-p1 .m-sinal{fill:#001f44}
+.m-abrir rect{fill:transparent;stroke-dasharray:4 4}
+.m-no:hover rect,.m-no:focus-visible rect,.m-no.m-hl rect{stroke-width:4;fill:#0a4d9a}
+.m-p1:hover rect,.m-p1:focus-visible rect,.m-p1.m-hl rect{fill:#fff}
+.m-sinal{font:700 18px system-ui,sans-serif!important}
+.m-no:focus-visible rect{stroke:#fff}
+.m-centro{cursor:pointer;outline:none}
+.m-miolo{fill:#D4A017;stroke:#fff;stroke-width:3}
+.m-ct{font:400 26px var(--display);fill:#003B7A}.m-cs{font:600 11px system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;fill:#003B7A}
+.m-halo{fill:none;stroke:#D4A017;stroke-width:2;transform-origin:center;transform-box:fill-box;animation:m-pulso 3s ease-out infinite}
+.m-halo2{animation-delay:1.5s}
+@keyframes m-pulso{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.m-centro:focus-visible .m-miolo{stroke:#00AB4E;stroke-width:6}
+.mapa-dica{text-align:center;color:var(--muted);font-size:14px;margin:14px 0 0}
+.mapa-lista{margin-top:20px}
+.mapa-lista ul{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px solid var(--gold)}
+.mapa-lista>ul{padding-left:0;border:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.mapa-lista>ul>li{background:#f3f6fa;border-radius:12px;padding:16px 18px;border-top:4px solid var(--gold)}
+.mapa-lista li{margin:6px 0}
+.mapa-lista a{text-decoration:none;color:var(--blue);font-weight:600;border-bottom:1px solid transparent}
+.mapa-lista a:hover{border-bottom-color:var(--gold)}
+.mapa-lista ul a{font-weight:500}
+@media(prefers-reduced-motion:reduce){.m-linha,.m-halo{animation:none}.header-globo{transition:none}}
