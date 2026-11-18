@@ -172,3 +172,7 @@ p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-
 .button{background:var(--white);color:var(--gold);border:2px solid var(--gold);border-radius:12px;padding:11px 22px}
 .button:hover{background:var(--gold);color:var(--white)}
 .button.ghost,.button.ghost-light{border-radius:12px}
+
+/* Associe-se: amarelo mais vivo */
+.foot-assoc .assoc-btn{background:#FFC800;color:var(--blue);border:0}
+.foot-assoc .assoc-btn:hover{background:#FFD83A;color:var(--blue)}
