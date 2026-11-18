@@ -188,3 +188,7 @@ p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-
 
 /* Galerias 2x2: nunca cortar as fotos; barras laterais/superiores quando preciso */
 .ev-fotos.ev-4 img,.ev-fotos.sedefotos img{aspect-ratio:3/2;height:auto;object-fit:contain;background:var(--blue)}
+
+/* Depto. Cultural: foto ao lado do título, texto abaixo */
+.cult-foto img{display:block;width:100%;height:auto;border-radius:12px}
+.sec-texto-cult{padding-top:0}.sec-texto-cult .prose p{max-width:none}
