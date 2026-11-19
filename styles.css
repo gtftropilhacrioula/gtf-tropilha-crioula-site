@@ -269,3 +269,13 @@ p:not(.eyebrow),.lista li,.publicos li,.tl-txt{text-align:justify;hyphens:auto;-
 .mapa-lista a:hover{border-bottom-color:var(--gold)}
 .mapa-lista ul a{font-weight:500}
 @media(prefers-reduced-motion:reduce){.m-linha,.m-halo{animation:none}.header-globo{transition:none}}
+/* Menu lateral: fundo branco, letras azuis */
+header nav{color:var(--blue);background:#fff;box-shadow:12px 0 48px rgba(0,20,48,.25)}
+.drawer-head{border-bottom:1px solid #d7e0eb}
+.menu-close{border-color:var(--blue);color:var(--blue)}
+header nav a{color:var(--blue)}
+header nav a:hover,header nav a:focus-visible{background:#eef3f9;color:var(--blue)}
+header nav a[aria-current=page]{background:#eef3f9;color:var(--blue);font-weight:700}
+header nav a.nav-cta,header nav a.nav-cta:hover{color:var(--blue)}
+header nav a.nav-cta[aria-current=page]{outline-color:var(--blue)}
+@media(max-width:760px){header nav{box-shadow:-12px 0 48px rgba(0,20,48,.25)}}
