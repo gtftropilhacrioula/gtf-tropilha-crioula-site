@@ -279,3 +279,7 @@ header nav a[aria-current=page]{background:#eef3f9;color:var(--blue);font-weight
 header nav a.nav-cta,header nav a.nav-cta:hover{color:var(--blue)}
 header nav a.nav-cta[aria-current=page]{outline-color:var(--blue)}
 @media(max-width:760px){header nav{box-shadow:-12px 0 48px rgba(0,20,48,.25)}}
+/* Botões: fundo branco, texto azul */
+.button{color:var(--blue)}
+.button:hover{background:var(--rs-yellow);color:var(--blue);border-color:var(--gold)}
+.button.ghost:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}
