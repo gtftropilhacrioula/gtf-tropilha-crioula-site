@@ -294,3 +294,6 @@ header nav a.nav-cta[aria-current=page]{outline-color:var(--blue)}
 .hero-imgs .hi3{width:52%;right:6%;bottom:0;transform:rotate(-1.5deg);z-index:3}
 @media(max-width:900px){.page-hero.com-imgs .page-hero-in{grid-template-columns:1fr;gap:28px}.hero-imgs{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px}.hero-imgs img{position:static;width:100%;transform:none}.hero-imgs .hi1{grid-column:1/-1}}
 @media(max-width:900px){.hero-imgs .hi1,.hero-imgs .hi2,.hero-imgs .hi3{position:static;width:100%;transform:none}.hero-imgs .hi1{grid-column:1/-1}}
+
+/* Sedes: como chegar */
+.como-chegar{margin:28px auto 8px;max-width:760px;text-align:center}.como-chegar img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #d7e0eb}.como-chegar figcaption{font-size:14px;color:var(--muted);margin-top:10px}.facts .button{margin-top:0}
