@@ -297,3 +297,5 @@ header nav a.nav-cta[aria-current=page]{outline-color:var(--blue)}
 
 /* Sedes: como chegar */
 .como-chegar{margin:28px auto 8px;max-width:760px;text-align:center}.como-chegar img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #d7e0eb}.como-chegar figcaption{font-size:14px;color:var(--muted);margin-top:10px}.facts .button{margin-top:0}
+
+.anuncio{border:2px solid var(--gold);border-radius:12px;padding:32px;background:#fffbea}.anuncio h2{margin-top:0}.anuncio-lista{padding-left:20px}.anuncio-lista li{margin:6px 0}.anuncio a:not(.button){text-decoration:underline;font-weight:700;word-break:break-all}.anuncio .button.destaque{background:var(--gold);color:var(--blue);font-size:17px;padding:16px 30px}.anuncio .button.destaque:hover{background:var(--blue);color:var(--white);border-color:var(--blue)}.anuncio-apoio{font-size:15px;color:var(--muted)}@media(max-width:760px){.anuncio{padding:22px}}
