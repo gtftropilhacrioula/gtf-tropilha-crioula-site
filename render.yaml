@@ -6,6 +6,9 @@ services:
     staticPublishPath: .
     autoDeployTrigger: commit
     routes:
+      - type: rewrite
+        source: /mdconverter
+        destination: /mdconverter.html
       - type: redirect
         source: /projetos-culturais.html
         destination: /projetos-da-entidade.html
