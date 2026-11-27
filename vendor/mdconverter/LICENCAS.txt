@@ -1,2 +1,2 @@
 Bibliotecas usadas pelo conversor, cada uma com a sua licença original:
-mammoth (BSD-2-Clause), turndown e turndown-plugin-gfm (MIT), pdf.js (Apache-2.0), read-excel-file (MIT).
+mammoth (BSD-2-Clause), turndown e turndown-plugin-gfm (MIT), pdf.js (Apache-2.0), read-excel-file (MIT), fflate (MIT).

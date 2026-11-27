@@ -107,6 +107,19 @@ async function pdfToMd(file){
 
 var T={docx:docxToMd,xlsx:xlsxToMd,pdf:pdfToMd};
 var list=document.getElementById('md-lista'),inp=document.getElementById('md-arquivo'),drop=document.getElementById('md-drop');
+var feitos=[],zipbar=document.getElementById('md-zipbar'),zipbtn=document.getElementById('md-zip');
+function baixar(blob,nome){var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=nome;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
+function atualizaZip(){zipbar.hidden=feitos.length<2;zipbtn.textContent='Baixar todos em .zip ('+feitos.length+' arquivos)'}
+zipbtn.addEventListener('click',async function(){
+  await loadScript('fflate.min.js');
+  var o={},usados={};
+  feitos.slice().reverse().forEach(function(f){
+    var n=nomeMd(f.nome),b=n.replace(/\.md$/,''),i=1;
+    while(usados[n.toLowerCase()]){i++;n=b+' ('+i+').md'}
+    usados[n.toLowerCase()]=1;o[n]=fflate.strToU8(f.md);
+  });
+  baixar(new Blob([fflate.zipSync(o)],{type:'application/zip'}),'conversoes-markdown.zip');
+});
 function nomeMd(n){return n.replace(/\.[^.]+$/,'')+'.md'}
 function addCard(file){
   var ext=(file.name.split('.').pop()||'').toLowerCase();
@@ -119,12 +132,13 @@ function addCard(file){
   T[ext](file).then(function(r){
     if(r.nota){nota.textContent=r.nota;nota.hidden=false}
     if(!r.md.trim()){st.textContent='Sem conteúdo para converter.';c.classList.add('erro');return}
+    feitos.push({nome:file.name,md:r.md});atualizaZip();
     ta.value=r.md;ta.hidden=false;btns.hidden=false;st.textContent='Pronto · '+r.md.length.toLocaleString('pt-BR')+' caracteres';
     c.querySelector('.md-copy').onclick=function(){
       var b=this;(navigator.clipboard?navigator.clipboard.writeText(r.md):Promise.reject()).catch(function(){ta.select();document.execCommand('copy')}).then(function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1800)});
     };
     c.querySelector('.md-down').onclick=function(){
-      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([r.md],{type:'text/markdown;charset=utf-8'}));a.download=nomeMd(file.name);document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);
+      baixar(new Blob([r.md],{type:'text/markdown;charset=utf-8'}),nomeMd(file.name));
     };
   }).catch(function(e){st.textContent='Não foi possível converter este arquivo.';nota.textContent=String(e&&e.message||e);nota.hidden=false;c.classList.add('erro')});
 }
